@@ -1,0 +1,17 @@
+//Breakpoint mixin
+
+@mixin breakpoint($size) {
+  @media only screen and (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+// Usage
+// .navbar {
+//   display: flex;
+//   flex-direction: column;
+
+//   @include breakpoint(sm) {
+//     flex-direction: row;
+//   }
+// }
