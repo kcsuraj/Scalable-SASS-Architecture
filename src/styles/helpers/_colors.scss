@@ -1,0 +1,50 @@
+// $palette
+// Define app color palette
+$palette: (
+  primary: (
+    base: #0766cc,
+    white: #fff,
+    black: #000 '
+  ),
+  sec: (
+    viking: #67DAD4,
+    amaranth: #E94158,
+    jaffa: #f19533,
+    emerald: #68d087'
+  ),
+  gray: (
+    base: #555,
+    darker: #222,
+    dark: #333,
+    light: #777,
+    lighter: #eee
+  )
+);
+
+// Function to map colors
+// ? https://medium.com/@suraj.kc/defining-color-palette-in-sass-with-variables-6464c3c3b5e5
+@function color($color, $tone) {
+  @warn map-get($palette,$color);
+
+  @if map-has-key($palette, $color) {
+    $color: map-get($palette, $color);
+
+    @if map-has-key($color, $tone) {
+      $tone: map-get($color, $tone);
+      @return $tone;
+    }
+
+    @warn "unknown tone `#{$tone}` in color";
+    @return null;
+  }
+
+  @warn "unknown color `#{$color}` in palette";
+  @return null;
+}
+
+// ==========================================================================
+// Usage
+// ==========================================================================
+// .navbar {
+//   background-color: color(gray, base);
+// }
