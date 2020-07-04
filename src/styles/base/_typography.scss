@@ -1,0 +1,32 @@
+// @params
+// $size: font size of heading element
+//
+//Heading element styles
+@mixin heading-size($size) {
+  font-size: $size;
+  line-height: 1.33;
+}
+
+h1 {
+  @include heading-size(map-get($font-size, xl));
+}
+
+h2 {
+  @include heading-size(map-get($font-size, lg));
+}
+
+h3 {
+  @include heading-size(map-get($font-size, md));
+}
+
+h4 {
+  @include heading-size(map-get($font-size, sm));
+}
+
+h5 {
+  @include heading-size(map-get($font-size, xs));
+}
+
+h6 {
+  @include heading-size(map-get($font-size, xs));
+}

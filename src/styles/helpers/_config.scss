@@ -9,3 +9,14 @@ $breakpoints: (
   lg: 1200px,
   xl: 1600px
 );
+
+// $font-size
+// Common font size values
+// $font-size - {map}
+$font-size: (
+  xs: 12px,
+  sm: 14px,
+  md: 16px,
+  lg: 24px,
+  xl: 32px
+);
