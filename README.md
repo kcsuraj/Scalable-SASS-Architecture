@@ -1,8 +1,14 @@
-# Frontend Boilerplate with Webpack
+# Scalable SASS Architecture
 
 ## Prerequisites
 
 - [nodejs](https://nodejs.org/)
+
+Sass files directory:
+
+```
+src/styles
+```
 
 ## Usage
 
