@@ -1,0 +1,25 @@
+// Truncate
+// $width: max width of line
+@mixin truncate($width) {
+  max-width: $width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// ==========================================================================
+// Usage
+// ==========================================================================
+// .text {
+//   @include truncate(50px);
+// }
+
+// ==========================================================================
+// Generate CSS
+// ==========================================================================
+// .text {
+//   max-width: 50px;
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+// }
