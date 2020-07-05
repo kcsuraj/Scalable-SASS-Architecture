@@ -1,0 +1,31 @@
+// Clear floated elements
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// ==========================================================================
+// Usage
+// ==========================================================================
+.content {
+  @include clearfix;
+}
+
+// ==========================================================================
+// Generated CSS
+// ==========================================================================
+// .content:before {
+//     content: '';
+//     display: table;
+// }
+// .content:after{
+//     content: '';
+//     display: table;
+//     clear: both;
+// }
