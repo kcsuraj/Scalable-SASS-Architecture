@@ -1,0 +1,22 @@
+// Position mixin
+
+@mixin position($position, $args) {
+  @each $o in top right bottom left {
+    $i: index($args, $o);
+    @if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number {
+      #{$o}: nth($args, $i + 1);
+    }
+  }
+  position: $position;
+}
+
+// ==========================================================================
+// Usage
+// ==========================================================================
+// .notification {
+//   @include position(absolute, bottom 20px right 50px);
+// }
+
+// .banner {
+//   @include position(absolute, top 0 right 0 bottom 0 left 0);
+// }
