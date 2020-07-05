@@ -10,6 +10,11 @@ Sass files directory:
 src/styles
 ```
 
+## Features
+
+- Based on [SMACSS](http://smacss.com/)
+- Collection of useful sass mixins
+
 ## Usage
 
 Install packages
