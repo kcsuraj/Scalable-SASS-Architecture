@@ -1,0 +1,75 @@
+@mixin button-size($paddingX, $paddingY, $fontSize) {
+  padding: $paddingX $paddingY;
+  font-size: $fontSize;
+}
+
+@mixin button-variant($background, $color) {
+  color: $color;
+  background-color: $background;
+
+  &:hover,
+  &:focus {
+    background-color: darken($background, 5%);
+  }
+}
+
+.button {
+  display: inline-block;
+  cursor: pointer;
+  border: 0;
+  border-radius: 3px;
+  text-align: center;
+  white-space: nowrap;
+
+  &:disabled {
+    opacity: 0.2;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &.button-primary {
+    @include button-size(10px, 24px, 14px);
+    @include button-variant(color(primary, base), color(primary, white));
+  }
+
+  &.button-success {
+    @include button-size(10px, 24px, 14px);
+    @include button-variant(color(sec, success), color(primary, white));
+  }
+
+  &.button-default {
+    @include button-size(6px, 24px, 14px);
+    @include button-variant(color(gray, dark), rgba(color(primary, white), 0.7));
+  }
+
+  &.button-link {
+    @include button-size(0, 24px, 14px);
+    @include button-variant(transparent, color(primary, base));
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &.button-outline {
+    @include button-size(10px, 24px, 14px);
+    @include button-variant(transparent, color(primary, base));
+    border: 1px solid color(primary, base);
+
+    &:hover {
+      background-color: color(primary, base);
+      color: color(primary, white);
+    }
+  }
+}
+
+// ==========================================================================
+// Usage
+// ==========================================================================
+//  <button class="button button-primary>Success button</button>
+//  <button class="button button-success>Success button</button>
+//  <button class="button button-default>Success button</button>
+//  <button class="button button-outline>Success button</button>
+//  <a class="button button-link>Link button</a>

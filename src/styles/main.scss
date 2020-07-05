@@ -8,4 +8,13 @@
 // ==========================================================================
 // Base Styles
 // ==========================================================================
-@import 'base';
+@import 'base/reset';
+@import 'base/base';
+@import 'base/typography';
+
+// ==========================================================================
+// Components
+// Styles for generic UI components
+// Examples include navbar, dialog boxes, carousels, sidebar etc
+// ==========================================================================
+@import 'components/button';
