@@ -1,0 +1,46 @@
+// Apply custom styles in input placehodlers
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+// ==========================================================================
+// Usage
+// ==========================================================================
+// input {
+//   @include input-placeholder {
+//     color: #eee;
+//   }
+// }
+
+// ==========================================================================
+// Generated CSS
+// ==========================================================================
+// input.placeholder {
+//   color: #eee;
+// }
+// input.-moz-placeholder {
+//   color: #eee;
+// }
+// input::-moz-placeholder {
+//   color: #eee;
+// }
+// input:-ms-input-placeholder {
+//   color: #eee;
+// }
+// input::-webkit-input-placeholder {
+//   color: #eee;
+// }
