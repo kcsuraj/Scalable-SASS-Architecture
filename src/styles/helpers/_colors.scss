@@ -23,6 +23,8 @@ $palette: (
 
 // Function to map colors
 // ? https://medium.com/@suraj.kc/defining-color-palette-in-sass-with-variables-6464c3c3b5e5
+//  $color - map vaue
+//  $tone - key of map value
 @function color($color, $tone) {
   @warn map-get($palette,$color);
 
