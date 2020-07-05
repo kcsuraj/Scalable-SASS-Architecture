@@ -1,8 +1,15 @@
 //Breakpoint mixin
-
-@mixin breakpoint($size) {
-  @media only screen and (min-width: map-get($breakpoints, $size)) {
-    @content;
+// $width - Size of screen
+// $type - min or max, default is min
+@mixin breakpoint($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
   }
 }
 
@@ -21,11 +28,13 @@
 // ==========================================================================
 // Generate CSS
 // ==========================================================================
-// .navbar{
-//   display: flex;
-//   flex-direction: column;
-
-//   @media screen and (min-width: 768px){
-//     flex-direction: row;;
+// @media only screen and (min-width: 768px) {
+//   .nav {
+//     background-color: teal;
+//   }
+// }
+// @media only screen and (max-width: 767px) {
+//   .menu {
+//     display: flex;
 //   }
 // }

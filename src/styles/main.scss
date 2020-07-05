@@ -3,7 +3,13 @@
 // ==========================================================================
 @import 'helpers/config';
 @import 'helpers/colors';
-@import 'helpers/mixins';
+// Mixins
+@import 'helpers/mixins/breakpoints';
+@import 'helpers/mixins/clearfix';
+@import 'helpers/mixins/input-placeholder';
+@import 'helpers/mixins/position';
+@import 'helpers/mixins/position-center';
+@import 'helpers/mixins/reset-list';
 
 // ==========================================================================
 // Base Styles
