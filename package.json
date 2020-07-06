@@ -1,5 +1,5 @@
 {
-  "name": "scalable-sass-srchitecture",
+  "name": "scalable-sass-architecture",
   "version": "1.0.0",
   "description": "Scalable SASS Architecture",
   "main": "app.js",
@@ -34,7 +34,6 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.2.0",
     "babel": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "imagemin-webpack-plugin": "^2.1.5"
