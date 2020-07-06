@@ -1,8 +1,23 @@
 // Trigger hardware acceleration for animations and CSS properties
 
-@mixin hardware-accceleration($backface: true, $perspective: 1000) {
+@mixin hardware-acceleration($backface: true, $perspective: 1000) {
   @if $backface {
     backface-visibility: hidden;
   }
   perspective: $perspective;
 }
+
+// ==========================================================================
+// Usage
+// ==========================================================================
+// .content {
+//   @include hardware-acceleration(true, 1000);
+// }
+
+// ==========================================================================
+// Generated CSS
+// ==========================================================================
+// .content {
+//   backface-visibility: visible;
+//   perspective: 1000;
+// }

@@ -10,9 +10,10 @@
 @import 'helpers/mixins/position';
 @import 'helpers/mixins/position-center';
 @import 'helpers/mixins/reset-list';
-@import 'helpers/mixins/hardware-accceleration';
+@import 'helpers/mixins/hardware-acceleration';
 @import 'helpers/mixins/truncate';
 @import 'helpers/mixins/background-transition';
+@import 'helpers/mixins/slanted-edge';
 
 // ==========================================================================
 // Base Styles
@@ -28,3 +29,9 @@
 // ==========================================================================
 @import 'components/button';
 @import 'components/checkbox';
+
+.banner {
+  height: 500px;
+  background-color: teal;
+  @include slanted-edge(after, false, 3deg);
+}
